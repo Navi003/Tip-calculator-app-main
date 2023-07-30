@@ -1,0 +1,246 @@
+/* 
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+  
+*/
+
+/* 
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+
+*/
+
+/* Default styling */
+html {
+  font-size: 62.5%;
+  font-family: monospace;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Main Styls  */
+body {
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: monospace;
+}
+.container {
+  width: 70rem;
+  height: 35rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 2.7rem;
+  gap: 3rem;
+}
+.calc-body {
+  border-radius: 5px;
+  background-color: hsl(183, 100%, 15%);
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  color: hsl(189, 41%, 97%);
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.input-body {
+  width: 100%;
+}
+.tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+}
+
+.result {
+  height: 100%;
+}
+
+.amount-txt {
+  display: flex;
+  flex-direction: column;
+}
+.amount-txt span {
+  font-size: 1rem;
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+}
+.tip-total,
+.tip-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: hsl(172, 67%, 45%);
+  letter-spacing: 0.2rem;
+  gap: 0.31rem;
+}
+.btn {
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  transition: 300ms;
+}
+.btn.reset:hover {
+  background-color: hsl(185, 41%, 84%);
+  cursor: pointer;
+}
+
+.input-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.input-area {
+  padding: 1rem 2rem;
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: right;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid transparent;
+  transition: all 300ms;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  font-family: monospace;
+  -moz-appearance: textfield;
+
+  background-color: hsl(189, 41%, 97%);
+}
+
+.input-area:focus {
+  outline: none;
+  border: none;
+  border: 2px solid hsl(172, 67%, 45%);
+}
+
+.heading-3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: hsl(184, 14%, 56%);
+}
+
+.select-from {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.select {
+  flex-basis: 9rem;
+
+  font-size: 1.8rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(185, 41%, 84%);
+}
+.select:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(185, 41%, 84%);
+  cursor: pointer;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input-area::-webkit-inner-spin-button,
+.input-area::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.costum {
+  text-decoration: none;
+  text-transform: none;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(186, 14%, 43%);
+
+  background-color: hsl(189, 41%, 97%);
+}
+.display {
+  display: flex;
+  justify-content: space-between;
+}
+
+.valid-num {
+  color: rgb(168, 43, 43);
+  font-weight: lighter;
+}
+
+.border {
+  border: 2px solid rgb(105, 10, 10);
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.custum {
+  text-transform: none;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 9rem;
+  padding: 0;
+  background-color: hsl(189, 41%, 97%);
+}
+.custum::-webkit-inner-spin-button,
+.custum::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
